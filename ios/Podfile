@@ -7,6 +7,9 @@ require Pod::Executable.execute_command('node', ['-p',
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
+   # Add this line for DoubleConversion if not already included
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+pod 'React-RCTAppDelegate', :path => '../node_modules/react-native/Libraries/AppDelegate'
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
@@ -22,6 +25,7 @@ target 'Unified' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  
 
   target 'UnifiedTests' do
     inherit! :complete

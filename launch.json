@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+	  {
+		"name": "Debug Android",
+		"program": "${workspaceFolder}/.vscode/launch.json",
+		"request": "launch",
+		"type": "reactnative",
+		"platform": "android"
+	  },
+	  {
+		"name": "Debug iOS",
+		"program": "${workspaceFolder}/.vscode/launch.json",
+		"request": "launch",
+		"type": "reactnative",
+		"platform": "ios"
+	  }
+	]
+  }
